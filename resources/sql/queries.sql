@@ -36,3 +36,7 @@ WHERE name = :name
 -- select user with name and password
 SELECT * from users
 WHERE name = :name AND password = :password
+
+--name:get-names
+-- select user names
+SELECT name from users

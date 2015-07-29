@@ -71,6 +71,9 @@
       (db/save-user! (assoc params :timestamp (Date.)))
       (redirect "/login"))))
 
+(defn admin-page []
+  (layout/render "admin.html"
+                 {:users (db/get-names)}))
 
 (defn about-page []
   (layout/render "about.html"))
@@ -84,7 +87,7 @@
            (GET "/about" [] (about-page))
            (GET "/signup" request (signup-page request))
            (POST "/signup" request (save-user! request))
-
+           (GET "/admin" [] (admin-page))
 
 
   )
