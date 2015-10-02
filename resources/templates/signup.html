@@ -17,15 +17,20 @@
                 <p>
                     Password:
                     <input class="form-control"
-                           type="text"
+                           type="password"
                            name="password"/>
                 </p>
                 {% if errors.message %}
-                <div class="alert alert-danger">{{errors.password|join}}</div>
+                <div class="alert alert-danger">{{errors.message|join}}</div>
                 {% endif %}
+
+                <div class="g-recaptcha" data-sitekey="6LcUqAwTAAAAAH_AmKpD4j0C99UuKFD2ZN02k2yY"></div>
                 <input type="submit" class="btn btn-primary" value="Sign up" />
             </form>
         </div>
     </div>
 </div>
+{% endblock %}
+{% block head-scripts %}
+    {% script "https://www.google.com/recaptcha/api.js" %}
 {% endblock %}

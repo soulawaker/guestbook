@@ -1,0 +1,1 @@
+ALTER TABLE users ADD COLUMN facebookid VARCHAR(100);

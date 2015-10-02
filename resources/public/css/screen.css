@@ -1,16 +1,19 @@
 body {
+    padding-top: 50px;
+    /*
     height: 100%;
-    padding-top: 70px;
     font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.4em;
     background: #eaeaea;
     width: 550px;
     margin: 0 auto;
+    */
 }
 
 .messages {
-  background: white;
-  width: 520px;
+    background: white;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 ul {
     list-style: none;
@@ -19,8 +22,7 @@ ul {
 .messages li {
     position: relative;
     font-size: 16px;
-    padding: 5px;
-    border-bottom: 1px dotted #ccc;
+    padding-bottom: 3px;
 }
 
 li:last-child {
@@ -32,18 +34,13 @@ li time {
     padding-bottom: 20px;
 }
 
-form[action="/"],
+form[action="/guestbooks"],
 form[action="/login"],
 form[action="/update"],
 form[action="/signup"],
 .error {
-    width: 520px;
     padding: 30px;
-    margin-bottom: 50px;
     position: relative;
     background: white;
 }
 
-form[action="/delete"] {
-    display: inline;
-}

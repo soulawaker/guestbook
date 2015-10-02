@@ -2,14 +2,15 @@
 {% block content %}
 <div class="row">
     <div class="span12">
+        <h3>Users</h3>
         <ul class="messages">
-            <li><p>test input</p></li>
             {% for user in users %}
             <li>
-                <p>{{user.name}}</p>
+                <p> {{user.name}}</p>
             </li>
             {% endfor %}
         </ul>
     </div>
 </div>
 {% endblock %}
+
